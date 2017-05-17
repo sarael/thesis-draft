@@ -45,6 +45,18 @@ First, we collected our data by crawling the IMDB website as it has movies metad
 \section{Dataset}
 \label{section:dataset}
 In this section we first start by describing the dataset used in this thesis along with the basic notations we will use to describe our dataset. 
+In our dataset we have a set of movies $M = \{m_{1},...,m_{l}\}$ each movie has a set of reviews  $R_{m} = \{r_{m1},..., r_{mp} \}$ and each review contains a set of sentences $S_{r} = \{s_{r1},..., s_{rp} \}$. Also each sentence contains a set of words $s_{r} = \{w_{r1},..., w_{rq} \}$.
+
+As we describe in subsection \ref{subsection:preprocessing} we apply a set of pre-processing steps to all the words of all the reviews sentences in order to clean the data. The outcome of this step is a set of unique words $V= \{w_{1},..., w_{n} \}$, $n$ being the size of the vocabulary. 
+
+Given a set of domain knowledge aspects $A = \{a_{1},..., a_{f} \}$, our goal is to detect from our vocabulary for each aspect $i$ the distinctive related terms to it called \textit{aspect signature} that we denote $AS(a)$ .
+
+The first problem that we tackle is to map words to their vector representation in order to measure the semantic similarity between words.
+The goal of words representation is to create a word representation matrix  $W$ $\in$  $\mathbb{R}^{d*n} $ where $d$ is the vector dimension whereas $n$ is the size of the vocabulary.
+Such representation allow us to have for each word $w$ its word vector representation $\vec{w}$.
+
+Then after representing words as vectors our goal is to find a metric to measure the similarity between words in order to detect similar words to a particular word.
+
 \subsection{Dataset characteristics}
 For this thesis we crawl the \textit{IMDB} website in the period of (). We chose this data to build and evaluate our algorithms because in addition to the overall rating that users give to a movie, they also provide a textual review to explain their opinion. As shown in Figure \ref{umlDiagram}, this dataset contains three different entities the Movie entity that has four different attributes: the movie unique identifier i.e. the \textit{movieId} the movie title, the year of appearance of the movie  and the list of the IMDB genres for example [Romance, Comedy]. For the User entity we only have the user unique identifier as an attribute. Finally we have the Review entity that has three attributes, three attributes, the review Id which is the (movieId, userId)tuple because a user can only write one review per movie, the second attribute is the text review which is the actual review that the user has written about the movie. The final review entity attribute is the rating given by the user to the movie ranging from 1 star to 10 stars. It's worth noting that a user might write a review along with a rating or just a review orgive a rating. In our dataset we have 9888 movies  and 763571 reviews; the details are illustrated in Table \ref{datastat}.
 
@@ -68,15 +80,8 @@ We did a similar analysis for the sentences length, in Figure \ref{NbWordsPerSen
 9887        & 17131      & 763571       & 775654       & 11437314       \\ \hline
 \end{tabular}
 \end{table}
-\subsection{Problem statement}
-We have a set of movie $M = \{m_{1},...,m_{l}\}$ each movie has a set of reviews  $R_{m} = \{r_{m1},..., r_{mq} \}$ each review contains a set of sentences $S_{r} = \{s_{r1},..., s_{rp} \}$ and each sentence contains a set of words $s_{r} = \{w_{r1},..., w_{rq} \}$.
-The vocabulary set is the concatenation of all the words of all the sentences reviews.
-Given a set of domain knowledge aspects $A = \{a_{1},..., a_{f} \}$, our goal is to detect from our vocabulary for each aspect the distinctive related terms to it while allowing overlap between the terms of each aspect.
-\subsection{Basic notations}
-In our dataset we have a set of reviews $R = \{r_{1},..., r_{q} \}$ regarding a set of movies $M = \{m_{1},...,m_{l}\}$. Each review contains a set of sentences. We denote the sentences of all reviews as  $S = \{s_1, ..., s_m\}$ where $m$ is the total number of sentences. As described in subsection \ref{subsection:preprocessing} each sentence is tokenized then lemmatized so we end up with a set of unique words $V= \{w_{1},..., w_{n} \}$, $n$ being the size of the vocabulary. The goal of words representation is to create a word representation matrix 
-$W$ $\in$  $\mathbb{R}^{d*n} $
-where $d$ is the vector dimension whereas $n$ is the size of the vocabulary.
-Such representation allow us to map each word $w$ to its word vector representation $\vec{v}$.
+
+
 \section{Vocabulary}
 \label{vocab}
 Our crawled corpus of reviews contains lots of noise that can cause misleading results while representing words as vectors such as punctuation, html tags and urls. These issues can be solved by using natural language techniques which are called text pre-processing. The output of this step serves as the vocabulary that will be used while representing words as vectors.
@@ -343,7 +348,7 @@ We define the similarity between the $X$ and $Y$ as the count of the maximum sim
 $$\underset{max-count-pairs}{similarity(X,Y)}=\frac{1}{n}\sum_{i}^{n} \overset {m}{\underset{j}{max}}( cosine(x_{i},y_{j}))$$
 \subsubsection{Word movers distance}
 
-For this use case we use the recently introduced distance metric by  Kusner et al. \cite{wmd:2015} called word movers distance (a special case of the Earth Mover’s Distance (EMD) \cite{emd:1998})that leverages the low-dimensional word representations.
+For this use case we use the recently introduced distance metric by  Kusner et al. \cite{wmd:2015} called word movers distance (a special case of the Earth Mover's Distance (EMD) \cite{emd:1998})that leverages the low-dimensional word representations.
 This approach was shown to lead to state-of-the-art error rates in k-nearest neighbor (kNN) for the task of document classification.
 
 We assume that we are given a word embedding matrix $W \in R^{d*n}$ for a vocabulary of $n$ words. Let 
