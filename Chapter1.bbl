@@ -1,0 +1,110 @@
+\begin{thebibliography}{10}
+
+\bibitem{nltk:2006}
+S.~Bird.
+\newblock Nltk: the natural language toolkit.
+\newblock In {\em Proceedings of the COLING/ACL on Interactive presentation
+  sessions}, pages 69--72. Association for Computational Linguistics, 2006.
+
+\bibitem{nltk:2009}
+S.~Bird, E.~Klein, and E.~Loper.
+\newblock {\em Natural language processing with Python: analyzing text with the
+  natural language toolkit}.
+\newblock " O'Reilly Media, Inc.", 2009.
+
+\bibitem{church:1989}
+K.~Church, W.~Gale, P.~Hanks, and D.~Hindle.
+\newblock Parsing, word associations and typical predicate-argument relations.
+\newblock In {\em Proceedings of the workshop on Speech and Natural Language},
+  pages 75--81. Association for Computational Linguistics, 1989.
+
+\bibitem{collobert:2011}
+R.~Collobert, J.~Weston, L.~Bottou, M.~Karlen, K.~Kavukcuoglu, and P.~Kuksa.
+\newblock Natural language processing (almost) from scratch.
+\newblock {\em Journal of Machine Learning Research}, 12(Aug):2493--2537, 2011.
+
+\bibitem{lsa:1990}
+S.~Deerwester, S.~T. Dumais, G.~W. Furnas, T.~K. Landauer, and R.~Harshman.
+\newblock Indexing by latent semantic analysis.
+\newblock {\em Journal of the American society for information science},
+  41(6):391, 1990.
+
+\bibitem{svd:1936}
+C.~Eckart and G.~Young.
+\newblock The approximation of one matrix by another of lower rank.
+\newblock {\em Psychometrika}, 1(3):211--218, 1936.
+
+\bibitem{fyshe:2015}
+A.~Fyshe, L.~Wehbe, P.~P. Talukdar, B.~Murphy, and T.~M. Mitchell.
+\newblock A compositional and interpretable semantic space.
+\newblock In {\em HLT-NAACL}, pages 32--41, 2015.
+
+\bibitem{harris:1954}
+Z.~S. Harris.
+\newblock Distributional structure.
+\newblock {\em Word}, 10(2-3):146--162, 1954.
+
+\bibitem{wmd:2015}
+M.~J. Kusner, Y.~Sun, N.~I. Kolkin, K.~Q. Weinberger, et~al.
+\newblock From word embeddings to document distances.
+\newblock In {\em ICML}, volume~15, pages 957--966, 2015.
+
+\bibitem{levy:2015}
+O.~Levy, Y.~Goldberg, and I.~Dagan.
+\newblock Improving distributional similarity with lessons learned from word
+  embeddings.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  3:211--225, 2015.
+
+\bibitem{tsne:2008}
+L.~v.~d. Maaten and G.~Hinton.
+\newblock Visualizing data using t-sne.
+\newblock {\em Journal of Machine Learning Research}, 9(Nov):2579--2605, 2008.
+
+\bibitem{manning:1999}
+C.~D. Manning, H.~Sch{\"u}tze, et~al.
+\newblock {\em Foundations of statistical natural language processing}, volume
+  999.
+\newblock MIT Press, 1999.
+
+\bibitem{mikolov:2013}
+T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado, and J.~Dean.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock In {\em Advances in neural information processing systems}, 2013.
+
+\bibitem{emdcomlexity:2009}
+O.~Pele and M.~Werman.
+\newblock Fast and robust earth mover's distances.
+\newblock In {\em Computer vision, 2009 IEEE 12th international conference on},
+  pages 460--467. IEEE, 2009.
+
+\bibitem{glove:2014}
+J.~Pennington, R.~Socher, and C.~D. Manning.
+\newblock Glove: Global vectors for word representation.
+\newblock In {\em EMNLP}, volume~14, pages 1532--1543, 2014.
+
+\bibitem{emd:1998}
+Y.~Rubner, C.~Tomasi, and L.~J. Guibas.
+\newblock A metric for distributions with applications to image databases.
+\newblock In {\em Computer Vision, 1998. Sixth International Conference on},
+  pages 59--66. IEEE, 1998.
+
+\bibitem{turney:2001}
+P.~D. Turney.
+\newblock Mining the web for synonyms: Pmi-ir versus lsa on toefl.
+\newblock In {\em European Conference on Machine Learning}, pages 491--502.
+  Springer, 2001.
+
+\bibitem{turney:2010}
+P.~D. Turney and P.~Pantel.
+\newblock From frequency to meaning: Vector space models of semantics.
+\newblock {\em Journal of artificial intelligence research}, 37:141--188, 2010.
+
+\bibitem{pca:1987}
+S.~Wold, K.~Esbensen, and P.~Geladi.
+\newblock Principal component analysis.
+\newblock {\em Chemometrics and intelligent laboratory systems}, 2(1-3):37--52,
+  1987.
+
+\end{thebibliography}
